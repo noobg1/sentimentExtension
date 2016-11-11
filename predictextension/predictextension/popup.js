@@ -7,8 +7,21 @@ chrome.runtime.onMessage.addListener(function(msg,request, sender) {
 
     axios.get(  window.messager)
   .then(function(response){
-    var res = document.querySelector('#message');
-    res.innerText = response.data['result'];
+    var res = document.getElementById('message');
+    var emoji ;
+    if(response.data['result'] == 'pos')
+        res.className = "em em-grinning";
+
+    else if (response.data['result'] == 'neg')
+      res.className = "em em-neutral_face";
+
+    else if (response.data['result'] == 'neutral')
+        res.className = "em em-no_mouth";
+
+    else   res.className = "em em-mask";
+
+
+    
     console.log(response.data); // ex.: { user: 'Your User'}
     console.log(response.status); // ex.: 200
   }); 
