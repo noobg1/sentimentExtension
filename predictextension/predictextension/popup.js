@@ -13,7 +13,7 @@ chrome.runtime.onMessage.addListener(function(msg,request, sender) {
         res.className = "em em-grinning";
 
     else if (response.data['result'] == 'neg')
-      res.className = "em em-neutral_face";
+      res.className = "em em-confused";
 
     else if (response.data['result'] == 'neutral')
         res.className = "em em-no_mouth";
