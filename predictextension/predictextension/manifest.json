@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "emosuggest",
-  "description": "Suggests an emoji",
+  "name": "Sentiment Analysis",
+  "description": "Provides the sentiment of query text as positive/ negative/ neutral",
   "version": "1.0",
 
   "background": {
@@ -19,7 +19,7 @@
      },
 
   "browser_action": {
-    //"default_popup": "popup.html"
+    
     "default_title": "inject",
     "default_popup": "popup.html"
   },
