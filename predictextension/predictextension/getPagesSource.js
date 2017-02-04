@@ -8,8 +8,6 @@ function start(document) {
         
 }
 
-
-
 chrome.runtime.sendMessage({
     action: "getSource",
     source: start(document)
